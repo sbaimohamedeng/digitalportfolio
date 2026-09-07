@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Mohamed Sbai — Ingénieur Méthodes & Chargé d'Affaires | Traitement & Recyclage des Eaux</title>
+<meta name="description" content="Ingénieur méthodes et chargé d'affaires spécialisé dans les stations de traitement et recyclage des eaux (osmose inverse, eaux domestiques et industrielles). Plans 3D/2D, pilotage de projet, industrialisation. +20% de productivité, -15% de délais.">
+<style>
+
+  :root{
+    --bleu-fonce:#0b3b5e;
+    --bleu:#12507f;
+    --cyan:#0e9f9f;
+    --cyan-clair:#e6f7f7;
+    --gris:#4a5a66;
+    --gris-clair:#f4f7f9;
+    --blanc:#ffffff;
+    --ombre:0 8px 24px rgba(11,59,94,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--gris);line-height:1.65;background:var(--blanc);}
+  img{max-width:100%;}
+  .conteneur{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HERO ---------- */
+  header{
+    background:linear-gradient(135deg,var(--bleu-fonce) 0%,var(--bleu) 55%,var(--cyan) 130%);
+    color:var(--blanc);
+    padding:88px 0 120px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:70px;
+    background:var(--blanc);
+    clip-path:polygon(0 100%,100% 0,100% 100%);
+  }
+  .badge{
+    display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);
+    padding:6px 16px;border-radius:999px;font-size:.82rem;letter-spacing:.4px;margin-bottom:22px;
+  }
+  h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;font-weight:800;letter-spacing:-.5px;}
+  h1 span{color:#7fd8c8;}
+  .sous-titre{font-size:clamp(1.05rem,2.2vw,1.3rem);font-weight:500;margin-top:16px;max-width:760px;color:#d8e9f4;}
+  .hero-chiffres{display:flex;flex-wrap:wrap;gap:34px;margin-top:34px;}
+  .hero-chiffres div strong{display:block;font-size:1.7rem;color:#7fd8c8;font-weight:800;}
+  .hero-chiffres div span{font-size:.9rem;color:#bcd6e6;}
+  .cta{display:inline-block;margin-top:40px;background:var(--cyan);color:#fff;font-weight:700;
+    padding:14px 30px;border-radius:999px;text-decoration:none;font-size:1rem;
+    box-shadow:0 6px 20px rgba(14,159,159,.4);transition:transform .2s,box-shadow .2s;}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(14,159,159,.5);}
+
+  /* ---------- NAV ---------- */
+  nav.menu{background:var(--blanc);box-shadow:0 1px 0 #e6ecf0;position:sticky;top:0;z-index:50;}
+  nav.menu ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:10px 20px;}
+  nav.menu a{color:var(--bleu-fonce);text-decoration:none;font-size:.9rem;font-weight:600;padding:8px 14px;border-radius:8px;transition:background .15s;}
+  nav.menu a:hover{background:var(--cyan-clair);color:var(--cyan);}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:70px 0;}
+  h2{font-size:clamp(1.5rem,3vw,2rem);color:var(--bleu-fonce);font-weight:800;letter-spacing:-.3px;margin-bottom:12px;}
+  .intro-section{color:var(--gris);max-width:720px;margin-bottom:38px;}
+  .sur-ligne{width:52px;height:4px;background:var(--cyan);border-radius:4px;margin-bottom:20px;}
+
+  /* ---------- À PROPOS ---------- */
+  .apropos{background:var(--gris-clair);}
+  .apropos-grille{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start;}
+  .apropos p{margin-bottom:14px;}
+  .apropos strong{color:var(--bleu-fonce);}
+  .carte-profil{background:var(--blanc);border-radius:16px;box-shadow:var(--ombre);padding:26px;border-top:4px solid var(--cyan);}
+  .carte-profil h3{color:var(--bleu-fonce);font-size:1.05rem;margin-bottom:16px;}
+  .carte-profil ul{list-style:none;}
+  .carte-profil li{padding:9px 0;border-bottom:1px dashed #dce6ec;font-size:.95rem;}
+  .carte-profil li:last-child{border-bottom:none;}
+  .carte-profil li b{color:var(--bleu);}
+
+  /* ---------- OFFRES ---------- */
+  .grille-offres{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
+  .offre{background:var(--blanc);border:1px solid #e1eaf0;border-radius:16px;padding:28px 24px;box-shadow:var(--ombre);transition:transform .2s;}
+  .offre:hover{transform:translateY(-4px);}
+  .offre .num{font-size:.8rem;font-weight:800;color:var(--cyan);letter-spacing:1.5px;}
+  .offre h3{color:var(--bleu-fonce);font-size:1.12rem;margin:10px 0 8px;}
+  .offre p{font-size:.94rem;margin-bottom:12px;}
+  .offre .livrable{font-size:.85rem;color:var(--bleu);font-weight:600;}
+  .offre .preuve{display:inline-block;margin-top:12px;background:var(--cyan-clair);color:var(--bleu-fonce);
+    font-weight:700;font-size:.82rem;padding:5px 12px;border-radius:999px;}
+
+  /* ---------- RÉSULTATS ---------- */
+  .resultats{background:linear-gradient(135deg,var(--bleu-fonce),var(--bleu));color:#fff;}
+  .resultats h2{color:#fff;}
+  .resultats .sur-ligne{background:#7fd8c8;}
+  .resultats .intro-section{color:#cfe0ec;}
+  .grille-resultats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin-top:10px;}
+  .chiffre{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:28px 22px;text-align:center;}
+  .chiffre strong{display:block;font-size:2.3rem;color:#7fd8c8;font-weight:800;}
+  .chiffre span{font-size:.92rem;color:#d8e9f4;}
+
+  /* ---------- GALERIE ---------- */
+  .galerie{background:var(--blanc);}
+  .galerie-filtres{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 32px;}
+  .filtre-btn{background:var(--gris-clair);color:var(--bleu-fonce);border:1px solid #dde6ec;border-radius:999px;
+    padding:9px 18px;font-size:.88rem;font-weight:600;cursor:pointer;transition:all .15s;}
+  .filtre-btn:hover{background:var(--cyan-clair);border-color:var(--cyan);color:var(--cyan);}
+  .filtre-btn.actif{background:var(--cyan);color:#fff;border-color:var(--cyan);box-shadow:0 4px 12px rgba(14,159,159,.25);}
+  .grille-galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;}
+  .plan-carte{background:var(--blanc);border:1px solid #e1eaf0;border-radius:14px;overflow:hidden;box-shadow:var(--ombre);
+    cursor:zoom-in;transition:transform .2s,box-shadow .2s;}
+  .plan-carte:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(11,59,94,.18);}
+  .plan-carte img{display:block;width:100%;height:200px;object-fit:cover;background:#f4f7f9;border-bottom:1px solid #e1eaf0;}
+  .plan-carte .info{padding:16px 18px 18px;}
+  .plan-carte .cat{display:inline-block;background:var(--cyan-clair);color:var(--cyan);
+    font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:.5px;text-transform:uppercase;}
+  .plan-carte h4{color:var(--bleu-fonce);font-size:1.02rem;margin:10px 0 4px;line-height:1.3;}
+  .plan-carte .client{font-size:.85rem;color:var(--gris);}
+  .plan-carte .ref{font-size:.75rem;color:var(--cyan);font-weight:600;margin-top:6px;}
+  .plan-carte .tech{margin-top:10px;padding-top:10px;border-top:1px dashed #dce6ec;font-size:.82rem;color:var(--gris);line-height:1.5;}
+  .plan-carte .tech b{color:var(--bleu-fonce);font-weight:700;}
+  .plan-carte .tech .tag{display:inline-block;background:var(--gris-clair);color:var(--bleu);font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:4px;margin-right:6px;letter-spacing:.3px;text-transform:uppercase;}
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;
+    z-index:1000;padding:30px;}
+  .lightbox.ouvert{display:flex;}
+  .lightbox img{max-width:95vw;max-height:92vh;background:#fff;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+  .lightbox .close{position:absolute;top:18px;right:22px;background:rgba(255,255,255,.15);
+    color:#fff;border:none;font-size:2rem;width:46px;height:46px;border-radius:50%;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;line-height:1;}
+  .lightbox .close:hover{background:rgba(255,255,255,.3);}
+  .lightbox .legende{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;font-size:.95rem;}
+
+  /* ---------- EXPÉRIENCE ---------- */
+  .exp{background:var(--gris-clair);}
+  .exp-bloc{border-left:3px solid var(--cyan);padding:6px 0 6px 26px;margin-bottom:38px;}
+  .exp-bloc h3{color:var(--bleu-fonce);font-size:1.15rem;}
+  .exp-bloc .role{color:var(--cyan);font-weight:700;font-size:.95rem;margin-bottom:10px;}
+  .exp-bloc ul{list-style:none;}
+  .exp-bloc li{position:relative;padding-left:22px;margin-bottom:8px;font-size:.96rem;}
+  .exp-bloc li::before{content:"▸";position:absolute;left:0;color:var(--cyan);font-weight:700;}
+
+  /* ---------- COMPÉTENCES ---------- */
+  .competences{background:var(--blanc);}
+  .grille-comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .comp{background:var(--gris-clair);border-radius:14px;padding:20px;box-shadow:var(--ombre);}
+  .comp h3{color:var(--bleu-fonce);font-size:1rem;margin-bottom:8px;}
+  .comp ul{list-style:none;font-size:.9rem;}
+  .comp li{padding:5px 0;border-bottom:1px dashed #e2ebf1;}
+  .comp li:last-child{border:none;}
+
+  /* ---------- MODALITÉS ---------- */
+  .modalites{background:var(--gris-clair);}
+  .modalites-grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+  .modalite{border:1px solid #e1eaf0;border-radius:14px;padding:22px;background:var(--blanc);}
+  .modalite h3{color:var(--bleu-fonce);font-size:1rem;margin-bottom:6px;}
+  .modalite p{font-size:.9rem;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:linear-gradient(135deg,var(--bleu-fonce),var(--bleu));color:#fff;text-align:center;}
+  .contact h2{color:#fff;}
+  .contact .sur-ligne{margin:0 auto 20px;background:#7fd8c8;}
+  .contact p{color:#d8e9f4;max-width:560px;margin:0 auto 30px;}
+  .contact-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .btn-mail{background:var(--cyan);color:#fff;font-weight:700;padding:13px 28px;border-radius:999px;text-decoration:none;}
+  .btn-li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:#fff;font-weight:600;padding:13px 28px;border-radius:999px;text-decoration:none;}
+  .contact .tel{margin-top:22px;font-size:.95rem;color:#bcd6e6;}
+
+  footer{background:var(--bleu-fonce);color:#8fb0c6;text-align:center;padding:22px 0;font-size:.85rem;}
+  .a-completer{background:#fff3cd;color:#8a6d1a;border-radius:4px;padding:1px 6px;font-size:.85em;font-weight:600;}
+
+  @media (max-width:760px){
+    .apropos-grille{grid-template-columns:1fr;gap:28px;}
+    header{padding:64px 0 96px;}
+    .grille-galerie{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header>
+  <div class="conteneur">
+    <span class="badge">Ingénierie mécanique · Méthodes · Pilotage de projet</span>
+    <h1>SBAI MOHAMED <br><span>Ingénieur Méthodes & Chargé d'Affaires</span></h1>
+    <p class="sous-titre">Spécialisé dans la conception, l'industrialisation et le pilotage de <strong>stations de traitement et recyclage des eaux</strong> domestiques et industrielles — osmose inverse, filtration, procédés membranaires.</p>
+    <div class="hero-chiffres">
+      <div><strong>+20%</strong><span>de productivité</span></div>
+      <div><strong>−15%</strong><span>de délais de production</span></div>
+      <div><strong>18 mois</strong><span>en ingénierie & industrie</span></div>
+      <div><strong>Étude → MES</strong><span>pilotage complet de projet</span></div>
+    </div>
+    <a class="cta" href="#galerie">Voir la galerie (16 plans 3D)</a>
+  </div>
+</header>
+
+<!-- ============ MENU ============ -->
+<nav class="menu">
+  <ul>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#resultats">Résultats</a></li>
+    <li><a href="#galerie">Galerie 3D</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============ À PROPOS ============ -->
+<section class="apropos" id="apropos">
+  <div class="conteneur apropos-grille">
+    <div>
+      <div class="sur-ligne"></div>
+      <h2>Qui suis-je ?</h2>
+      <p>Diplômé d'un <strong>Master spécialisé en ingénierie mécanique et procédés</strong>, j'ai exercé pendant <strong>18 mois en tant qu'ingénieur méthodes et chargé d'affaires</strong> au sein d'une entreprise de fabricantion de stations de traitement et recyclage des eaux.</p>
+      <p>Dans cette expérience, j'étais <strong>la personne référente pour la génération des plans 3D/2D des stations</strong> et pour le pilotage des projets industriels, <strong>de la phase étude jusqu'à la mise en service</strong>.</p>
+      <p>Mon rôle : faire le pont entre les bureaux d'études, la production, la qualité et les clients, pour transformer un besoin technique en une station <strong>faisable, fabriquée dans les délais et conforme</strong>.</p>
+    </div>
+    <div class="carte-profil">
+      <h3>Profil en bref</h3>
+      <ul>
+        <li><b>Formation :</b> Master spécialisé — ingénierie mécanique & procédés</li>
+        <li><b>Expérience :</b> 18 mois — ingénieur méthodes & chargé d'affaires <span class="a-completer">[nom entreprise]</span></li>
+        <li><b>Domaine :</b> Traitement & recyclage des eaux (osmose inverse, UF/MF, CIP)</li>
+        <li><b>Gamme :</b> Domestique (1-20 m³/h) et industrielle (jusqu'à 150 m³/h)</li>
+        <li><b>Localisation :</b> <span class="a-completer">[ville / région / mobilité]</span></li>
+        <li><b>Disponibilité :</b> <span class="a-completer">[CDI / freelance / missions]</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFRES DE SERVICES ============ -->
+<section class="offres" id="services">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Mes services</h2>
+    <p class="intro-section">Quatre familles de prestations, déclinées de mon expérience terrain. Chaque mission est livrée avec un livrable concret et mesurée en résultats.</p>
+    <div class="grille-offres">
+      <div class="offre">
+        <div class="num">01</div>
+        <h3>Bureau d'études 3D / 2D</h3>
+        <p>Conception et génération des plans de stations de traitement des eaux : modèles 3D, plans d'ensembles et de fabrication, dossiers techniques exploitables.</p>
+        <p class="livrable">Livrable : dossiers de plans maîtrisés et validés.</p>
+        <span class="preuve">Osmose inverse · eaux domestiques & industrielles</span>
+      </div>
+      <div class="offre">
+        <div class="num">02</div>
+        <h3>Pilotage de projet industriel</h3>
+        <p>Conduite de projets de l'étude à la mise en service : planning Gantt, coordination multi-équipes (BE, production, qualité, clients), suivi des délais.</p>
+        <p class="livrable">Livrable : projet livré à la mise en service, dans les temps.</p>
+        <span class="preuve">Phase étude → mise en service</span>
+      </div>
+      <div class="offre">
+        <div class="num">03</div>
+        <h3>Industrialisation & optimisation</h3>
+        <p>Industrialisation de systèmes techniques en garantissant la faisabilité des procédés. Optimisation des flux et des processus de fabrication.</p>
+        <p class="livrable">Livrable : processus fluidifié, gains mesurés.</p>
+        <span class="preuve">+20% productivité · −15% délais</span>
+      </div>
+      <div class="offre">
+        <div class="num">04</div>
+        <h3>Qualité, risques & données techniques</h3>
+        <p>Structuration et gestion des données techniques (plans, nomenclatures, documentation). Participation aux analyses de risques et résolution de problématiques.</p>
+        <p class="livrable">Livrable : données techniques fiables, plans d'action structurés.</p>
+        <span class="preuve">Méthodes DMAIC · 8M</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RÉSULTATS ============ -->
+<section class="resultats" id="resultats">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Résultats mesurés</h2>
+    <p class="intro-section">Des chiffres concrets obtenus sur le terrain, pas des promesses.</p>
+    <div class="grille-resultats">
+      <div class="chiffre"><strong>+20%</strong><span>de productivité, via l'optimisation des processus</span></div>
+      <div class="chiffre"><strong>−15%</strong><span>de délais de production, via l'optimisation des flux</span></div>
+      <div class="chiffre"><strong>16 projets</strong><span>plans 3D / 2D livrés aux clients</span></div>
+      <div class="chiffre"><strong>Multi-équipes</strong><span>BE · production · qualité · clients coordonnés</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIE DE PLANS 3D ============ -->
+<section class="galerie" id="galerie">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Galerie de plans 3D</h2>
+    <p class="intro-section">Sélection de plans d'ensemble générés sur CATIA — vues isométriques, de face, de dessus et de côté. Cliquez sur un plan pour l'agrandir.</p>
+
+    <div class="galerie-filtres">
+      <button class="filtre-btn actif" data-filtre="tous">Tous (16)</button>
+      <button class="filtre-btn" data-filtre="osmose">Osmose inverse (5)</button>
+      <button class="filtre-btn" data-filtre="uf">Ultrafiltration (2)</button>
+      <button class="filtre-btn" data-filtre="mf">Microfiltration (1)</button>
+      <button class="filtre-btn" data-filtre="cip">CIP (1)</button>
+      <button class="filtre-btn" data-filtre="wastewater">Eaux usées (5)</button>
+      <button class="filtre-btn" data-filtre="potabilisation">Potabilisation (2)</button>
+    </div>
+
+    <div class="grille-galerie">
+
+      <!-- Osmose inverse -->
+      <div class="plan-carte" data-cat="osmose" data-img="images/ro_45m3h_stm.png" data-legende="RO-Station 45 m³/h — STM — Vues isométriques, face, dessus, droite, gauche · mars 2025">
+        <img src="images/ro_45m3h_stm.png" alt="Plan 3D RO 45 m3/h STM">
+        <div class="info">
+          <span class="cat">Osmose inverse</span>
+          <h4>RO-Station 45 m³/h</h4>
+          <div class="client">Client : STM</div>
+          <div class="ref">PR25001 · 7400 × 2320 × 2000 mm</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid conteneurisé 7,40 × 2,32 × 2,00 m · tuyauterie HP DN50 + BP DN75<br>
+            <span class="tag">Config</span> ~24–30 membranes <b>8040</b>, <b>2 passes</b>, récup. ≈ 70–75 %<br>
+            <span class="tag">Standard</span> Pression HP 10–15 bar · pré-traitement 5 µm · flushing CIP intégré
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="osmose" data-img="images/ro_15m3h_myaqua.png" data-legende="RO 15 m³/h — MY AQUA — Vues isométriques, faces, dessus · avril 2025">
+        <img src="images/ro_15m3h_myaqua.png" alt="Plan 3D RO 15 m3/h MY AQUA">
+        <div class="info">
+          <span class="cat">Osmose inverse</span>
+          <h4>RO 15 m³/h</h4>
+          <div class="client">Client : MY AQUA</div>
+          <div class="ref">PR25004 · 5770 × 980 mm · Perméat DN75 / Alim. DN75 / Rejet DN50 / Attack DN75</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid 5,77 × 0,98 m · 3 piquages identifiés (perméat / alimentation / attaque) + rejet DN50<br>
+            <span class="tag">Config</span> ~8–10 membranes <b>8040</b>, <b>2 passes</b>, order nominal 15 m³/h<br>
+            <span class="tag">Standard</span> HP 12–14 bar · pompe multicellulaire verticale · instrumentation Perméat/Conductivité/Débit
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="osmose" data-img="images/ro_6m3h_myaqua.png" data-legende="Station 6 m³/h — MY AQUA — Vues isométriques, faces, dessus · octobre 2024">
+        <img src="images/ro_6m3h_myaqua.png" alt="Plan 3D RO 6 m3/h MY AQUA">
+        <div class="info">
+          <span class="cat">Osmose inverse</span>
+          <h4>RO Station 6 m³/h</h4>
+          <div class="client">Client : MY AQUA</div>
+          <div class="ref">PR24020 · 5876 mm</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid 5,88 m de longueur · version&nbsp;2<br>
+            <span class="tag">Config</span> ~4–6 membranes <b>8040</b>, <b>1 à 2 passes</b> selon TDS d’alimentation<br>
+            <span class="tag">Standard</span> HP 10–12 bar · conçu pour eaux saumâtres / potabilisation industrielle
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="osmose" data-img="images/ro_5m3h_inox_abra_trade.png" data-legende="Station RO 5 m³/h — ABRA TRADE (INOX) — Version 2 · juin 2025">
+        <img src="images/ro_5m3h_inox_abra_trade.png" alt="Plan 3D RO 5 m3/h INOX ABRA TRADE">
+        <div class="info">
+          <span class="cat">Osmose inverse</span>
+          <h4>Station RO 5 m³/h — INOX</h4>
+          <div class="client">Client : ABRA TRADE</div>
+          <div class="ref">PR25005 · Version 2</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid ~2000 mm largeur utile · châssis <b>INOX 304L</b><br>
+            <span class="tag">Config</span> ~3–4 membranes <b>8040</b>, <b>1 passe</b>, ordre nominal 5 m³/h<br>
+            <span class="tag">Standard</span> Finition INOX pour environnement hygiénique / atmosphère corrosive (vs version PPR en parallèle)
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="osmose" data-img="images/ro_5m3h_ppr_abra_trade.png" data-legende="Station RO 5 m³/h — ABRA TRADE (PPR) — Version 2 · juin 2025">
+        <img src="images/ro_5m3h_ppr_abra_trade.png" alt="Plan 3D RO 5 m3/h PPR ABRA TRADE">
+        <div class="info">
+          <span class="cat">Osmose inverse</span>
+          <h4>Station RO 5 m³/h — PPR</h4>
+          <div class="client">Client : ABRA TRADE</div>
+          <div class="ref">PR25007 · Version 2</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid ~2000 mm largeur utile · châssis <b>PPR</b> (polypropylène)<br>
+            <span class="tag">Config</span> ~3–4 membranes <b>8040</b>, <b>1 passe</b>, ordre nominal 5 m³/h<br>
+            <span class="tag">Standard</span> Tuyauterie PPR soudée — variante économique de la version INOX, même procédé membranaire
+          </div>
+        </div>
+      </div>
+
+      <!-- UF -->
+      <div class="plan-carte" data-cat="uf" data-img="images/uf_1m3h_inrh.png" data-legende="UF &amp; Treatment Plant 1 m³/h — INRH — Vues isométriques · janvier 2026">
+        <img src="images/uf_1m3h_inrh.png" alt="Plan 3D UF 1 m3/h INRH">
+        <div class="info">
+          <span class="cat">Ultrafiltration</span>
+          <h4>UF Plant 1 m³/h</h4>
+          <div class="client">Client : INRH</div>
+          <div class="ref">PR25014</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Pilote UF compact 1 m³/h · châssis skidisé<br>
+            <span class="tag">Config</span> <b>Fibres creuses</b> (typ. 0,01–0,1 µm) · ordre de grandeur 1–2 modules<br>
+            <span class="tag">Standard</span> Mode <b>dead-end / cross-flow</b> · rétrolavage périodique · prétraitement 100–200 µm
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="uf" data-img="images/uf_1m3h_inrh_v3.png" data-legende="UF &amp; Treatment Plant 1 m³/h — INRH — Version 3 · janvier 2026">
+        <img src="images/uf_1m3h_inrh_v3.png" alt="Plan 3D UF 1 m3/h INRH V3">
+        <div class="info">
+          <span class="cat">Ultrafiltration</span>
+          <h4>UF Plant 1 m³/h — V3</h4>
+          <div class="client">Client : INRH</div>
+          <div class="ref">PR25014 · V3</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Révision V3 du pilote · janvier 2026<br>
+            <span class="tag">Config</span> Même base membranaire (UF fibres creuses) avec correctifs d’industrialisation<br>
+            <span class="tag">Standard</span> Itération typique des livrables : V1 (esquisse) → V2 (revue interne) → V3 (gel de conception)
+          </div>
+        </div>
+      </div>
+
+      <!-- MF -->
+      <div class="plan-carte" data-cat="mf" data-img="images/mf_150m3h_valtech.png" data-legende="Station MF 150 m³/h — VALTECH — Vues isométriques · juillet 2025">
+        <img src="images/mf_150m3h_valtech.png" alt="Plan 3D MF 150 m3/h VALTECH">
+        <div class="info">
+          <span class="cat">Microfiltration</span>
+          <h4>Station MF 150 m³/h</h4>
+          <div class="client">Client : VALTECH</div>
+          <div class="ref">PR25008</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Très gros skid : réservoir cylindrique horizontal + bâche + local électrique/armoire de commande<br>
+            <span class="tag">Config</span> <b>Microfiltration 0,1–10 µm</b> · ~150 m³/h → forte surface membranaire (plusieurs modules en parallèle)<br>
+            <span class="tag">Standard</span> Préfiltration grossière en amont · rétrolavage automatique · instrumentation complète (pression transmembranaire)
+          </div>
+        </div>
+      </div>
+
+      <!-- CIP -->
+      <div class="plan-carte" data-cat="cip" data-img="images/cip_15m3h_somacham.png" data-legende="Station CIP 15 m³/h — SOMACHAM — mars 2025">
+        <img src="images/cip_15m3h_somacham.png" alt="Plan 3D CIP 15 m3/h SOMACHAM">
+        <div class="info">
+          <span class="cat">CIP</span>
+          <h4>Station CIP 15 m³/h</h4>
+          <div class="client">Client : SOMACHAM</div>
+          <div class="ref">PR25003</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid CIP (Clean-In-Place) 15 m³/h<br>
+            <span class="tag">Config</span> Boucle fermée : <b>cuve chimie + pompe de circulation + échangeur</b> · nettoyage périodique des membranes RO/UF/MF en place<br>
+            <span class="tag">Standard</span> Séquence typique : rinçage → caustique (NaOH) → rinçage → acide (citrique/HCl) → rinçage final · régulation T° 35–50 °C
+          </div>
+        </div>
+      </div>
+
+      <!-- Wastewater -->
+      <div class="plan-carte" data-cat="wastewater" data-img="images/wwt_15m3h_airup.png" data-legende="WWT 3×5 m³/h — AIR UP — Vues isométriques, faces, dessus · avril 2025">
+        <img src="images/wwt_15m3h_airup.png" alt="Plan 3D WWT AIR UP">
+        <div class="info">
+          <span class="cat">Eaux usées</span>
+          <h4>WWT 3×5 m³/h</h4>
+          <div class="client">Client : AIR UP</div>
+          <div class="ref">PR25006-CW · 2640 mm</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid WWT 2640 mm · plusieurs piquages (DN32 / DN40 / DN63 / DN75)<br>
+            <span class="tag">Config</span> <b>3 lignes parallèles de 5 m³/h</b> → 15 m³/h cumulés · modularité / redondance pour arrêt maintenance<br>
+            <span class="tag">Standard</span> Traitement biologique (boues activées / MBR) + clarification + désinfection · pompage et instrumentation DN32–75
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="wastewater" data-img="images/ww_managem_v31.png" data-legende="Wastewater Station — MANAGEM — Version 3.1 · octobre 2024">
+        <img src="images/ww_mamagem_v31.png" alt="Plan 3D Wastewater MANAGEM V3.1">
+        <div class="info">
+          <span class="cat">Eaux usées</span>
+          <h4>WW Station — V3.1</h4>
+          <div class="client">Client : MANAGEM</div>
+          <div class="ref">PR24004 · Version 3.1</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Itération V3.1 du dossier MANAGEM (16/10/2024) — version intermédiaire après revue client<br>
+            <span class="tag">Config</span> Station d’épuration industrielle (procédés miniers / process MANAGEM)<br>
+            <span class="tag">Standard</span> V3.1 = correctifs de masse sur V3 : intégration remarques revue, mise à jour nomenclatures, points de soudure
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="wastewater" data-img="images/ww_managem_v2.png" data-legende="Wastewater Station — MANAGEM — Version 2 · octobre 2024">
+        <img src="images/ww_mamagem_v2.png" alt="Plan 3D Wastewater MANAGEM V2">
+        <div class="info">
+          <span class="cat">Eaux usées</span>
+          <h4>WW Station — V2</h4>
+          <div class="client">Client : MANAGEM</div>
+          <div class="ref">PR24004 · Version 2</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Vue de droite + vue de dessus + front view · 07/10/2024 (V2)<br>
+            <span class="tag">Config</span> Station d’épuration pour process minier MANAGEM<br>
+            <span class="tag">Standard</span> V2 = gel technique avant revue client · corrections matériaux + prédimensionnement structurel
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="wastewater" data-img="images/ww_managem_station_v2.png" data-legende="Station — MANAGEM — Version 2 · octobre 2024">
+        <img src="images/ww_mamagem_station_v2.png" alt="Plan 3D Station MANAGEM V2">
+        <div class="info">
+          <span class="cat">Eaux usées</span>
+          <h4>Station MANAGEM V2</h4>
+          <div class="client">Client : MANAGEM</div>
+          <div class="ref">PR24004 · 1577 mm</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Skid compact 1577 mm · 09/10/2024 · signé Drawn/Checked/Designed (revue qualité interne date)<br>
+            <span class="tag">Config</span> Sous-ensemble unité procédé du dossier MANAGEM<br>
+            <span class="tag">Standard</span> Format livrable : plan d’ensemble + 4 vues (face / dessus / côté / iso) + cartouche complet signé
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="wastewater" data-img="images/station_11m_managem.png" data-legende="Compact Station — MANAGEM — Ø11 600 mm · mai 2025">
+        <img src="images/station_11m_managem.png" alt="Plan 3D Compact Station MANAGEM">
+        <div class="info">
+          <span class="cat">Eaux usées</span>
+          <h4>Compact Station</h4>
+          <div class="client">Client : MANAGEM</div>
+          <div class="ref">PR24005 · Ø11 600 mm · Eaux traitées</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Bassin / clarificateur cylindrique Ø <b>11 600 mm</b> · alimentation Ø <b>2500 mm</b> · bac de sortie 11 600 mm<br>
+            <span class="tag">Config</span> <b>Décanteur / clarificateur</b> statique ou lamellaire · grande section pour flux décanté<br>
+            <span class="tag">Standard</span> Industriels miniers : pré-décantation → épaississement des boues → reprise eau clarifiée vers étape suivante
+          </div>
+        </div>
+      </div>
+
+      <!-- Potabilisation -->
+      <div class="plan-carte" data-cat="potabilisation" data-img="images/dw_20m3h_mamagem_ctt.png" data-legende="Station 20 m³/h — MANAGEM CTT — Eau potable · décembre 2024">
+        <img src="images/dw_20m3h_mamagem_ctt.png" alt="Plan 3D Drinking Water 20 m3/h MANAGEM CTT">
+        <div class="info">
+          <span class="cat">Potabilisation</span>
+          <h4>Station Eau potable 20 m³/h</h4>
+          <div class="client">Client : MANAGEM CTT</div>
+          <div class="ref">PR24002_DW</div>
+          <div class="tech">
+            <span class="tag">Plan</span> Représentation <i>Right Wiew / Rear View / Front View / Top View</i> · Production d’eau potable (DW)<br>
+            <span class="tag">Config</span> 20 m³/h · chaîne classique : coagulation → filtration → <b>désinfection</b> (chlore / UV) → stockage<br>
+            <span class="tag">Standard</span> Conformité normes eau potable (local : ONEE / DGSS · international : OMS) · bâche de stockage + by-pass + analyseur chlore
+          </div>
+        </div>
+      </div>
+
+      <div class="plan-carte" data-cat="potabilisation" data-img="images/potabi_conteneur_18m3h_umv.png" data-legende="Station de potabilisation conteneurisée 18 m³/h — UMV-FSR · janvier-avril 2025">
+        <img src="images/potabi_conteneur_18m3h_umv.png" alt="Plan 3D Station potabilisation conteneur UMV-FSR">
+        <div class="info">
+          <span class="cat">Potabilisation</span>
+          <h4>Station conteneurisée 18 m³/h</h4>
+          <div class="client">Client : UMV-FSR</div>
+          <div class="ref">PR24021 · Version 2</div>
+          <div class="tech">
+            <span class="tag">Plan</span> <b>Conteneur maritime instrumenté</b> · compartimenté traitement + compartiment local technique<br>
+            <span class="tag">Config</span> Station <b>mobile / décentralisée</b> 18 m³/h · déploiement rapide sur site isolé<br>
+            <span class="tag">Standard</span> Chaîne intégrée : préfiltration → traitement membranaire (RO / UF) → désinfection → bâche · rack analyse & automatisme intégré
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-hidden="true">
+  <button class="close" id="lightbox-close" aria-label="Fermer">×</button>
+  <img id="lightbox-img" src="" alt="Plan 3D agrandi">
+  <div class="legende" id="lightbox-legende"></div>
+</div>
+
+<!-- ============ EXPÉRIENCE ============ -->
+<section class="exp" id="experience">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Expérience</h2>
+    <div class="exp-bloc">
+      <h3>Ingénieur Méthodes & Chargé d'Affaires</h3>
+      <div class="role">Fabricant de stations de traitement et recyclage des eaux — <span class="a-completer">[NT2E / entreprise, ville]</span> · 18 mois (2024-2026)</div>
+      <ul>
+        <li>Génération des <strong>plans 3D / 2D</strong> de 16+ stations, de l'osmose inverse domestique jusqu'aux unités industrielles 150 m³/h.</li>
+        <li><strong>Pilotage de projets</strong> industriels de la phase étude à la mise en service (suivi Gantt, coordination multi-équipes).</li>
+        <li>Coordination entre bureaux d'études, production, qualité et clients.</li>
+        <li>Industrialisation de systèmes techniques en garantissant la faisabilité des procédés.</li>
+        <li>Optimisation des processus de fabrication : <strong>+20% de productivité</strong>.</li>
+        <li>Réduction des délais de production de <strong>15%</strong> via l'optimisation des flux.</li>
+        <li>Structuration et gestion des données techniques (plans, nomenclatures, documentation).</li>
+        <li>Participation aux analyses de risques et résolution de problématiques techniques (<strong>DMAIC, 8M</strong>).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPÉTENCES ============ -->
+<section class="competences" id="competences">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Compétences clés</h2>
+    <div class="grille-comp">
+      <div class="comp">
+        <h3>Conception & BE</h3>
+        <ul>
+          <li>Plans 3D / 2D de stations</li>
+          <li>CATIA V5</li>
+          <li>Dossiers techniques de fabrication</li>
+          <li>Procédés membranaires (RO, UF, MF, CIP)</li>
+        </ul>
+      </div>
+      <div class="comp">
+        <h3>Méthodes & Industrialisation</h3>
+        <ul>
+          <li>Industrialisation de procédés</li>
+          <li>Optimisation des flux</li>
+          <li>Cartographie de processus</li>
+          <li>Gains mesurés (productivité & délais)</li>
+        </ul>
+      </div>
+      <div class="comp">
+        <h3>Pilotage de projet</h3>
+        <ul>
+          <li>Planning Gantt & suivi des délais</li>
+          <li>Coordination multi-équipes</li>
+          <li>Phase étude → mise en service</li>
+          <li>Relation client & chiffrage</li>
+        </ul>
+      </div>
+      <div class="comp">
+        <h3>Qualité & Risques</h3>
+        <ul>
+          <li>DMAIC / Six Sigma</li>
+          <li>Analyse 8M (Ishikawa)</li>
+          <li>Analyses de risques</li>
+          <li>Documentation technique</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODALITÉS ============ -->
+<section class="modalites" id="modalites">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Modalités d'intervention</h2>
+    <div class="modalites-grille">
+      <div class="modalite">
+        <h3>Formats</h3>
+        <p>CDI · Freelance / prestation · Portage salarial<br><span class="a-completer">[précisez vos préférences]</span></p>
+      </div>
+      <div class="modalite">
+        <h3>Missions types</h3>
+        <p>Études de stations, optimisation d'atelier, pilotage de projets eau, montée en cadence.</p>
+      </div>
+      <div class="modalite">
+        <h3>Références clients (sur accord)</h3>
+        <p>STM · MY AQUA · ABRA TRADE · MANAGEM · INRH · AIR UP · VALTECH · SOMACHAM · UMV-FSR · MANAGEM CTT.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="conteneur">
+    <div class="sur-ligne"></div>
+    <h2>Parlons de votre projet</h2>
+    <p>Un projet de station de traitement, une optimisation d'atelier, un besoin de renfort méthodes ? Écrivez-moi, je réponds sous 24h.</p>
+    <div class="contact-btns">
+      <a class="btn-mail" href="mailto:[votre.email@exemple.fr]">✉ <span class="a-completer">sbai.mohamed.eng@gmail.com</span></a>
+      <a class="btn-li" href="[lien-linkedin]" target="_blank" rel="noopener">mohamedsbai1207</a>
+    </div>
+    <p class="tel">Téléphone : <span class="a-completer">+212679955485</span></p>
+  </div>
+</section>
+
+<footer>
+  <div class="conteneur">© <span id="annee"></span> <span class="a-completer">MOHAMED SBAI</span> — Ingénierie des stations de traitement des eaux. Tous droits réservés.</div>
+</footer>
+
+<script>
+  // -------- Année dynamique
+  document.getElementById('annee').textContent = new Date().getFullYear();
+
+  // -------- Filtrage de la galerie
+  (function(){
+    const boutons = document.querySelectorAll('.filtre-btn');
+    const cartes = document.querySelectorAll('.plan-carte');
+    boutons.forEach(b => b.addEventListener('click', () => {
+      boutons.forEach(x => x.classList.remove('actif'));
+      b.classList.add('actif');
+      const f = b.dataset.filtre;
+      cartes.forEach(c => {
+        const ok = (f === 'tous') || (c.dataset.cat === f);
+        c.style.display = ok ? '' : 'none';
+      });
+    }));
+  })();
+
+  // -------- Lightbox
+  (function(){
+    const box = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const leg = document.getElementById('lightbox-legende');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.plan-carte').forEach(c => {
+      c.addEventListener('click', () => {
+        img.src = c.dataset.img;
+        img.alt = c.querySelector('img').alt;
+        leg.textContent = c.dataset.legende || '';
+        box.classList.add('ouvert');
+        box.setAttribute('aria-hidden','false');
+      });
+    });
+    function fermer(){ box.classList.remove('ouvert'); box.setAttribute('aria-hidden','true'); }
+    closeBtn.addEventListener('click', fermer);
+    box.addEventListener('click', e => { if (e.target === box) fermer(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') fermer(); });
+  })();
+</script>
+</body>
+</html>
